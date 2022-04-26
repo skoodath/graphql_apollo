@@ -1,1 +1,5 @@
 /node_modules
+/dotenv
+dotenv
+/.env
+.env
