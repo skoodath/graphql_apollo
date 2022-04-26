@@ -1,0 +1,35 @@
+@use "pagetitle.scss";
+
+.wrapper {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form_elements {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+}
+.input_group {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0.5rem 0;
+}
+input {
+  padding: 0.5rem;
+  outline: 1px solid transparent;
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
+}
+.add_contact {
+  padding: 0.5rem;
+  background-color: #2679ff;
+  outline: 1px solid transparent;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: #ffffff;
+  width: 100%;
+}

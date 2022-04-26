@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import "../style/header.scss";
 
 const Header = () => {
   const normalStyle = {
@@ -10,24 +11,26 @@ const Header = () => {
     borderBottom: "2px solid",
   };
   return (
-    <nav>
+    <nav className='navbar'>
       <NavLink
         to='/'
         style={({ isActive }) => (isActive ? activeStyle : normalStyle)}
+        className='navlink'
       >
         Home
-      </NavLink>{" "}
-      |{" "}
+      </NavLink>
       <NavLink
         to='/add_contact'
         style={({ isActive }) => (isActive ? activeStyle : normalStyle)}
+        className='navlink'
       >
         Add Contact
-      </NavLink>{" "}
-      |{" "}
+      </NavLink>
+
       <NavLink
         to='/add_phone'
         style={({ isActive }) => (isActive ? activeStyle : normalStyle)}
+        className='navlink'
       >
         Add Phone
       </NavLink>

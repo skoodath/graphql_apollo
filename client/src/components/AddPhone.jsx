@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useMutation } from "@apollo/client";
+import "../style/personform.scss";
 
 import { EDIT_NUMBER } from "../query";
 
@@ -22,25 +23,33 @@ const AddPhone = ({ setError }) => {
     }
   }, [result.data]); // eslint-disable-line
   return (
-    <div>
-      <h2>change number</h2>
+    <div className='wrapper'>
+      <h2 className='page_title'>Add/Change Phone</h2>
 
       <form onSubmit={submit}>
-        <div>
-          name{" "}
-          <input
-            value={name}
-            onChange={({ target }) => setName(target.value)}
-          />
+        <div className='form_elements'>
+          <div className='input_group'>
+            <label htmlFor='name'>Name</label>
+            <input
+              value={name}
+              name='name'
+              onChange={({ target }) => setName(target.value)}
+            />
+          </div>
         </div>
         <div>
-          phone{" "}
-          <input
-            value={phone}
-            onChange={({ target }) => setPhone(target.value)}
-          />
+          <div className='input_group'>
+            <label htmlFor='phone'>Phone</label>
+            <input
+              value={phone}
+              name='phone'
+              onChange={({ target }) => setPhone(target.value)}
+            />
+          </div>
         </div>
-        <button type='submit'>change number</button>
+        <button type='submit' className='add_contact'>
+          Add / Change Phone
+        </button>
       </form>
     </div>
   );

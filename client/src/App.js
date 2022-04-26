@@ -1,6 +1,6 @@
 import { useQuery } from "@apollo/client";
 import { useState } from "react";
-import "./App.css";
+import "./App.scss";
 import AddPhone from "./components/AddPhone";
 import Header from "./components/Header";
 import Notify from "./components/Notify";
@@ -26,18 +26,20 @@ function App() {
       <Notify errorMessage={errorMessage} />
       <Router>
         <Header />
-        <Routes>
-          <Route
-            path='/'
-            exact
-            element={<Persons persons={result.data.allPersons} />}
-          />
-          <Route
-            path='add_contact'
-            element={<PersonForm setError={notify} />}
-          />
-          <Route path='add_phone' element={<AddPhone setError={notify} />} />
-        </Routes>
+        <main>
+          <Routes>
+            <Route
+              path='/'
+              exact
+              element={<Persons persons={result.data.allPersons} />}
+            />
+            <Route
+              path='add_contact'
+              element={<PersonForm setError={notify} />}
+            />
+            <Route path='add_phone' element={<AddPhone setError={notify} />} />
+          </Routes>
+        </main>
       </Router>
     </div>
   );

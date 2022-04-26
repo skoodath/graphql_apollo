@@ -1,0 +1,13 @@
+.navbar {
+  padding: 1rem;
+  border-right: 1px solid #aaaaaa;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 100vh;
+  align-items: flex-start;
+}
+.navlink {
+  margin-bottom: 1rem;
+}

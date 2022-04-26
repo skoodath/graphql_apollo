@@ -1,15 +1,17 @@
 import { useQuery } from "@apollo/client";
 import React, { useState } from "react";
 import { FIND_PERSONS } from "../query";
+import "../style/person.scss";
 
 const Person = ({ person, onClose }) => {
   return (
     <div>
       <h2>{person.name}</h2>
+      <div>{person.phone}</div>
       <div>
         {person.address.street} {person.address.city}
       </div>
-      <div>{person.phone}</div>
+
       <button onClick={onClose}>close</button>
     </div>
   );
@@ -31,15 +33,21 @@ const Persons = ({ persons }) => {
     );
   }
   return (
-    <>
-      <h2>Persons</h2>
+    <div className='wrapper'>
+      <h2 className='page_title'>Persons</h2>
       {persons.map((p) => (
-        <div key={p.name}>
-          {p.name} {p.phone}
-          <button onClick={() => setSearchname(p.name)}>show address</button>
-        </div>
+        <article key={p.name} className='contact'>
+          <h3>{p.name}</h3>
+          <div>{p.phone}</div>
+          <button
+            onClick={() => setSearchname(p.name)}
+            className='address_button'
+          >
+            show address
+          </button>
+        </article>
       ))}
-    </>
+    </div>
   );
 };
 

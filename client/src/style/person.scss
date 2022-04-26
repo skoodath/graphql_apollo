@@ -1,0 +1,22 @@
+@use "pagetitle.scss";
+h2,
+h3 {
+  margin: 0;
+}
+.wrapper {
+  padding: 1rem;
+}
+.contact {
+  border-bottom: 1px solid #aaaaaa;
+  margin: 0 0 1rem 0;
+  padding: 1rem;
+  border-radius: 5px;
+  width: 200px;
+}
+.address_button {
+  padding: 8px;
+  border: 1px solid transparent;
+  outline: 1px solid transparent;
+  box-shadow: 1px 1px 2px #999999;
+  border-radius: 5px;
+}
